@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+
+.active hr{
+    @apply block
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+
+/* General styling for react-modal */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  outline: none; /* Remove default focus outline */
+  max-width: 500px; /* Optional: limit width */
+  width: 90%; /* Responsive width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.transition-max-height {
+  transition-property: max-height;
+}
+
+/* Custom CSS for cancelled appointment card visual distinction */
+.cancelled-appointment-card {
+    opacity: 0.7; /* Make it slightly transparent */
+    background-color: #fcfcfc; /* Very light background */
+    border-color: #f0f0f0; /* Lighter border */
+    /* Add transition for smoother visual change */
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
